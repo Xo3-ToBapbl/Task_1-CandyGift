@@ -12,5 +12,7 @@ namespace CandyGift.Candies
         public string type { get; }
         public string name { get; }
         public string sugar { get; }
+        public string toppig { get; }
+        public int mass { get; }
     }
 }

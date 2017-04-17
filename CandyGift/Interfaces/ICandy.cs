@@ -11,5 +11,7 @@ namespace CandyGift.Interfaces
         string type { get; }
         string name { get; }
         string sugar { get; }
+        string toppig { get; }
+        int mass { get; }
     }
 }
