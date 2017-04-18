@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Demostration
+namespace XMLData
 {
     static class Program
     {
@@ -13,7 +13,7 @@ namespace Demostration
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DemostrationForm());
+            Application.Run(new XMLDataForm());
         }
     }
 }

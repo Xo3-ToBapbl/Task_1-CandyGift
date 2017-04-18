@@ -7,7 +7,7 @@
     <ProjectGuid>{75B815BE-EA15-4EE2-9259-59E36C959583}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Demostration</RootNamespace>
+    <RootNamespace>XMLData</RootNamespace>
     <AssemblyName>Demostration</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\Demostration.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\Demostration.Properties.Settings.datasource" />
