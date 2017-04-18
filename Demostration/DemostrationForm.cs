@@ -112,5 +112,17 @@ namespace XMLData
                 }
             }
         }
+
+        private void DataGridView_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (DataGridView.SelectedRows.Count > 0)
+            {
+                TypeComboBox.Text = DataGridView.SelectedRows[0].Cells[0].Value.ToString();
+                CandyNameTextBox.Text = DataGridView.SelectedRows[0].Cells[1].Value.ToString();
+                ToppingComboBox.Text = DataGridView.SelectedRows[0].Cells[2].Value.ToString();
+                SugarNumericUpDown.Value = Convert.ToInt32(DataGridView.SelectedRows[0].Cells[3].Value);
+                MassNumericUpDown.Value = Convert.ToInt32(DataGridView.SelectedRows[0].Cells[4].Value);
+            }
+        }
     }
 }

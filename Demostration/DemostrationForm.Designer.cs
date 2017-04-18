@@ -43,13 +43,13 @@
             this.LoadButton = new System.Windows.Forms.Button();
             this.ClearAllbutton = new System.Windows.Forms.Button();
             this.DataGridView = new System.Windows.Forms.DataGridView();
-            this.SugarNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.MassLabel = new System.Windows.Forms.Label();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CandyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Topping = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SugarNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.MassLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MassNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SugarNumericUpDown)).BeginInit();
@@ -213,22 +213,7 @@
             this.DataGridView.Size = new System.Drawing.Size(544, 319);
             this.DataGridView.TabIndex = 5;
             this.DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellContentClick);
-            // 
-            // SugarNumericUpDown
-            // 
-            this.SugarNumericUpDown.Location = new System.Drawing.Point(78, 107);
-            this.SugarNumericUpDown.Name = "SugarNumericUpDown";
-            this.SugarNumericUpDown.Size = new System.Drawing.Size(123, 20);
-            this.SugarNumericUpDown.TabIndex = 6;
-            // 
-            // MassLabel
-            // 
-            this.MassLabel.AutoSize = true;
-            this.MassLabel.Location = new System.Drawing.Point(4, 137);
-            this.MassLabel.Name = "MassLabel";
-            this.MassLabel.Size = new System.Drawing.Size(44, 13);
-            this.MassLabel.TabIndex = 7;
-            this.MassLabel.Text = "Mass, g";
+            this.DataGridView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DataGridView_MouseClick);
             // 
             // Type
             // 
@@ -259,6 +244,22 @@
             this.Mass.HeaderText = "Mass, g";
             this.Mass.Name = "Mass";
             this.Mass.ReadOnly = true;
+            // 
+            // SugarNumericUpDown
+            // 
+            this.SugarNumericUpDown.Location = new System.Drawing.Point(78, 107);
+            this.SugarNumericUpDown.Name = "SugarNumericUpDown";
+            this.SugarNumericUpDown.Size = new System.Drawing.Size(123, 20);
+            this.SugarNumericUpDown.TabIndex = 6;
+            // 
+            // MassLabel
+            // 
+            this.MassLabel.AutoSize = true;
+            this.MassLabel.Location = new System.Drawing.Point(4, 137);
+            this.MassLabel.Name = "MassLabel";
+            this.MassLabel.Size = new System.Drawing.Size(44, 13);
+            this.MassLabel.TabIndex = 7;
+            this.MassLabel.Text = "Mass, g";
             // 
             // XMLDataForm
             // 
