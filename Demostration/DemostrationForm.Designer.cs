@@ -185,6 +185,7 @@
             this.LoadButton.TabIndex = 3;
             this.LoadButton.Text = "Load XML";
             this.LoadButton.UseVisualStyleBackColor = true;
+            this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
             // 
             // ClearAllbutton
             // 

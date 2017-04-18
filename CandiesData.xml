@@ -2,16 +2,30 @@
 <NewDataSet>
   <Candies>
     <Type>Caramel</Type>
-    <Name>xcxzczxc</Name>
+    <CandyName>assdad</CandyName>
     <Topping>Chocolate</Topping>
-    <Sugar>0</Sugar>
-    <Mass>0</Mass>
+    <Sugar>23</Sugar>
+    <Mass>23</Mass>
+  </Candies>
+  <Candies>
+    <Type>Caramel</Type>
+    <CandyName>assdad</CandyName>
+    <Topping>Chocolate</Topping>
+    <Sugar>22</Sugar>
+    <Mass>2</Mass>
   </Candies>
   <Candies>
     <Type>NutCandy</Type>
-    <Name>xcxzczxc</Name>
+    <CandyName>assdad</CandyName>
     <Topping>Chocolate</Topping>
-    <Sugar>0</Sugar>
-    <Mass>0</Mass>
+    <Sugar>22</Sugar>
+    <Mass>100</Mass>
+  </Candies>
+  <Candies>
+    <Type>NutCandy</Type>
+    <CandyName>assdad</CandyName>
+    <Topping>Likert</Topping>
+    <Sugar>22</Sugar>
+    <Mass>100</Mass>
   </Candies>
 </NewDataSet>
