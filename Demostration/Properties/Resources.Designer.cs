@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace XMLData.Properties {
+namespace XMLDataCreater.Properties {
     using System;
     
     

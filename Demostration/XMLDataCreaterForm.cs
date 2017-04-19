@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
 
-namespace XMLData
+namespace XMLDataCreater
 {
     public partial class XMLDataForm : Form
     {
@@ -64,7 +64,7 @@ namespace XMLData
                     data_row["Mass"] = data_grid_row.Cells[4].Value;
                     data_set.Tables["Candies"].Rows.Add(data_row);
                 }
-                data_set.WriteXml(@"d:\Programing\C#\Studying\EPAM\Task_1[CandyGift]\CandiesData.xml");
+                data_set.WriteXml("CandiesData.xml");
                 MessageBox.Show("CandiesData.xml successfully saved.");
             }
             catch (Exception)
@@ -91,10 +91,10 @@ namespace XMLData
             }
             else
             {
-                if (File.Exists(@"d:\Programing\C#\Studying\EPAM\Task_1[CandyGift]\CandiesData.xml"))
+                if (File.Exists("CandiesData.xml"))
                 {
                     DataSet data_set = new DataSet();
-                    data_set.ReadXml(@"d:\Programing\C#\Studying\EPAM\Task_1[CandyGift]\CandiesData.xml");
+                    data_set.ReadXml("CandiesData.xml");
 
                     foreach (DataRow data_row in data_set.Tables["Candies"].Rows)
                     {
@@ -122,6 +122,47 @@ namespace XMLData
                 ToppingComboBox.Text = DataGridView.SelectedRows[0].Cells[2].Value.ToString();
                 SugarNumericUpDown.Value = Convert.ToInt32(DataGridView.SelectedRows[0].Cells[3].Value);
                 MassNumericUpDown.Value = Convert.ToInt32(DataGridView.SelectedRows[0].Cells[4].Value);
+            }
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            if(DataGridView.SelectedRows.Count > 0)
+            {
+                DataGridView.Rows.RemoveAt(DataGridView.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Select row.");
+            }
+        }
+
+        private void CustomizeButton_Click(object sender, EventArgs e)
+        {
+            if (DataGridView.SelectedRows.Count > 0)
+            {
+                int n = DataGridView.SelectedRows[0].Index;
+                DataGridView.Rows[n].Cells[0].Value = TypeComboBox.Text;
+                DataGridView.Rows[n].Cells[1].Value = CandyNameTextBox.Text;
+                DataGridView.Rows[n].Cells[2].Value = ToppingComboBox.Text;
+                DataGridView.Rows[n].Cells[3].Value = SugarNumericUpDown.Value;
+                DataGridView.Rows[n].Cells[4].Value = MassNumericUpDown.Value;
+            }
+            else
+            {
+                MessageBox.Show("Select row.");
+            }
+        }
+
+        private void ClearAllbutton_Click(object sender, EventArgs e)
+        {
+            if(DataGridView.Rows.Count > 0)
+            {
+                DataGridView.Rows.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Table already clean.");
             }
         }
     }

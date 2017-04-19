@@ -1,4 +1,4 @@
-﻿namespace XMLData
+﻿namespace XMLDataCreater
 {
     partial class XMLDataForm
     {
@@ -117,6 +117,7 @@
             this.CustomizeButton.TabIndex = 3;
             this.CustomizeButton.Text = "Customize";
             this.CustomizeButton.UseVisualStyleBackColor = true;
+            this.CustomizeButton.Click += new System.EventHandler(this.CustomizeButton_Click);
             // 
             // TypeLabel
             // 
@@ -166,6 +167,7 @@
             this.DeleteButton.TabIndex = 3;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // SaveButton
             // 
@@ -195,6 +197,7 @@
             this.ClearAllbutton.TabIndex = 3;
             this.ClearAllbutton.Text = "Clear All";
             this.ClearAllbutton.UseVisualStyleBackColor = true;
+            this.ClearAllbutton.Click += new System.EventHandler(this.ClearAllbutton_Click);
             // 
             // DataGridView
             // 

@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandyGift", "CandyGift\CandyGift.csproj", "{06C8B1DF-84DE-45A0-8BAE-CE5EA1A031EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLData", "Demostration\XMLData.csproj", "{75B815BE-EA15-4EE2-9259-59E36C959583}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLDataCreater", "Demostration\XMLDataCreater.csproj", "{75B815BE-EA15-4EE2-9259-59E36C959583}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
