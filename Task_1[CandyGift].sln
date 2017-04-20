@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandyGift", "CandyGift\Cand
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLDataCreater", "Demostration\XMLDataCreater.csproj", "{75B815BE-EA15-4EE2-9259-59E36C959583}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demonstration", "Demonstration\Demonstration.csproj", "{7E2AA6DE-3F07-4865-BC24-C71F0982267A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{06C8B1DF-84DE-45A0-8BAE-CE5EA1A031EC} = {06C8B1DF-84DE-45A0-8BAE-CE5EA1A031EC}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +26,10 @@ Global
 		{75B815BE-EA15-4EE2-9259-59E36C959583}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75B815BE-EA15-4EE2-9259-59E36C959583}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75B815BE-EA15-4EE2-9259-59E36C959583}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E2AA6DE-3F07-4865-BC24-C71F0982267A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E2AA6DE-3F07-4865-BC24-C71F0982267A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E2AA6DE-3F07-4865-BC24-C71F0982267A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E2AA6DE-3F07-4865-BC24-C71F0982267A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

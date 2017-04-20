@@ -8,10 +8,12 @@ namespace CandyGift.Interfaces
 {
     interface ICandy
     {
-        string type { get; }
-        string name { get; }
-        string toppig { get; }
-        string sugar { get; }
-        int mass { get; }
+        string Name { get; }
+        int Mass { get; }
+        ICollection<object> PropertyList { get; }
+
+        void GetProperties();
+        void UpMainComponentBy(int ratio);
+        void DownMainComponentBy(int ratio);
     }
 }
