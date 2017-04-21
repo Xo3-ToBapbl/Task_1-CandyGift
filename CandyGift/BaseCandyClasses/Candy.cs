@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CandyGift.Candies
+namespace CandyGift.BaseCandyClasses
 {
-    public class Candy : ICandy
+    abstract class Candy: ICandy
     {
         public string Name { get; }
         public int Mass { get; }
@@ -23,16 +23,12 @@ namespace CandyGift.Candies
         public void GetProperties()
         {
             Console.WriteLine("{0}'s properties:", Name);
-            foreach(object property in PropertyList)
+            foreach (object property in PropertyList)
             {
                 Console.WriteLine("{0}", property);
             }
         }
-        public virtual void UpMainComponentBy(int property)
-        { 
-        }
-        public virtual void DownMainComponentBy(int property)
-        {
-        }       
+        abstract public void UpMainComponentBy(int ratio);
+        abstract public void DownMainComponentBy(int ratio);
     }
 }

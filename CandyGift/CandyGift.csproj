@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Candies\Candy.cs" />
+    <Compile Include="BaseCandyClasses\Candy.cs" />
+    <Compile Include="BaseCandyClasses\SaltCandy.cs" />
+    <Compile Include="BaseCandyClasses\SweetCandy.cs" />
+    <Compile Include="Candies\LolliPop.cs" />
     <Compile Include="Candies\Waffles.cs" />
     <Compile Include="Interfaces\ICandy.cs" />
     <Compile Include="Interfaces\ISaltedCandy.cs" />

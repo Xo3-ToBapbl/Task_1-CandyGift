@@ -19,20 +19,6 @@ namespace CandyGift.Candies
             PropertyList = new List<object> { Name, Mass, Sugar, Topping };
         }
 
-        public override void UpMainComponentBy(int ratio)
-        {
-            Sugar += ratio;
-        }
-        public override void DownMainComponentBy(int ratio)
-        {
-            if (Sugar < ratio)
-            {
-                Sugar -= ratio;
-            }
-            else
-            {
-                Console.WriteLine("Incorrect input. Reduction ratio is less than sugar value.");
-            }
-        }
+        
     }
 }
