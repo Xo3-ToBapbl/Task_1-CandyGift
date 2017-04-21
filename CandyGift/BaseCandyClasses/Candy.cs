@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CandyGift.BaseCandyClasses
 {
-    abstract class Candy: ICandy
+    public abstract class Candy: ICandy
     {
         public string Name { get; }
         public int Mass { get; }

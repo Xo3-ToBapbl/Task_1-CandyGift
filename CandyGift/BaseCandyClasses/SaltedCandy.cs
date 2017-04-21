@@ -5,29 +5,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CandyGift.Candies
+namespace CandyGift.BaseCandyClasses
 {
-    class LolliPop: Candy, ISweetCandy, ITopping 
+    public class SaltedCandy : Candy, ISaltedCandy
     {
-        public int Sugar { get; private set; }
-        public string Topping { get; }
+        public int Salt { get; private set; }
 
-        public LolliPop(string name, int mass, int sugar, string topping):base (name, mass)
+        protected SaltedCandy(string name, int mass, int salt) : base(name, mass)
         {
-            Sugar = sugar;
-            Topping = topping;
-            PropertyList = new List<object> { Name, Mass, Sugar, Topping };
+            Salt = salt;
+            PropertyList = new List<object> { Name, Mass, Salt};
         }
 
         public override void UpMainComponentBy(int ratio)
         {
-            Sugar += ratio;
+            Salt += ratio;
         }
         public override void DownMainComponentBy(int ratio)
         {
-            if (Sugar < ratio)
+            if (Salt < ratio)
             {
-                Sugar -= ratio;
+                Salt -= ratio;
             }
             else
             {

@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace CandyGift.BaseCandyClasses
 {
-    class SweetCandy: Candy, ISweetCandy, ITopping
+    public class SweetCandy: Candy, ISweetCandy, ITopping
     {
         public int Sugar { get; private set; }
-        public string Topping { get; }
+        public string Topping { get; private set; }
 
         protected SweetCandy(string name, int mass, int sugar, string topping):base (name, mass)
         {
