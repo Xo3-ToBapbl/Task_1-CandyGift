@@ -11,6 +11,7 @@ namespace CandyGift.SaltedCandies
     {
         public Salmiak(string name, int mass, int salt) : base(name, mass, salt)
         {
+            CandyType = "Salmiak";
         }
     }
 }

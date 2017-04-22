@@ -12,6 +12,7 @@ namespace CandyGift.SweetCandies
     {
         public LolliPop(string name, int mass, int sugar, string topping) : base(name, mass, sugar, topping)
         {
+            CandyType = "LolliPop";
         }
     }
 }
