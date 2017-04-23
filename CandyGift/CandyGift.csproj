@@ -43,6 +43,7 @@
     <Compile Include="BaseCandyClasses\Candy.cs" />
     <Compile Include="BaseCandyClasses\SaltedCandy.cs" />
     <Compile Include="BaseCandyClasses\SweetCandy.cs" />
+    <Compile Include="Gifts\Gift.cs" />
     <Compile Include="SaltedCandies\Cracker.cs" />
     <Compile Include="SaltedCandies\Salmiak.cs" />
     <Compile Include="SweetCandies\ChocolateCandy.cs" />
