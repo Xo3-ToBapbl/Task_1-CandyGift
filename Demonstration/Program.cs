@@ -22,17 +22,19 @@ namespace Demonstration
             Cracker Cracen = new Cracker("Cracen", 10, 8);
             Salmiak Lakrica = new Salmiak("Lakrica", 15, 12);
 
-            Dictionary<int, Candy> Candies = new Dictionary<int, Candy>()
+            Dictionary<Candy, int> Candies = new Dictionary<Candy, int>()
             {
-                {5, HollandWaffles },
-                {3, Alenka },
-                {6, Lolli },
+                {HollandWaffles, 5},
+                {Alenka, 3},
+                {Lolli, 6},
 
-                {7, Cracen },
-                {5, Lakrica}
+                {Cracen, 7},
+                {Lakrica, 5}
             };
             #endregion
             Gift MyGift = new Gift("MyGift", Candies);
+            MyGift.FindBySugar(17, 26);
+
             Console.ReadKey();
         }
     }
