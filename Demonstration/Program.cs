@@ -15,7 +15,7 @@ namespace Demonstration
         static void Main(string[] args)
         {
             #region Data
-            Waffles HollandWaffles = new Waffles("Holland Waffles", 50, 25, "Jam");
+            Waffles HollandWaffles = new Waffles("Holland Waffle", 50, 25, "Jam");
             ChocolateCandy Alenka = new ChocolateCandy("Alenka", 35, 18, "Jam");
             LolliPop Lolli = new LolliPop("Lolli", 5, 11, "Cherry");
 
@@ -33,7 +33,9 @@ namespace Demonstration
             };
             #endregion
             Gift MyGift = new Gift("MyGift", Candies);
-            MyGift.FindBySugar(17, 26);
+            MyGift.FindBySugar(25, 26);
+            MyGift.OrderByName();
+            MyGift.OrderByMass();
 
             Console.ReadKey();
         }
