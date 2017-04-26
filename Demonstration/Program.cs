@@ -125,15 +125,29 @@ namespace Demonstration
             }
             return candies_list;
         }
+        static Dictionary<Candy, int> CreateGiftDict(List<Candy> candies_list)
+        {
+            Dictionary<Candy, int> candies_dict = new Dictionary<Candy, int>();
+            Random random = new Random();
+
+            foreach (Candy candy in candies_list)
+            {
+                candies_dict[candy] = random.Next(1, 5);    
+            }
+            return candies_dict;
+        }
 
         static void Main(string[] args)
         {
             List<Candy> candies_list = LoadXML();
+            Dictionary<Candy, int> candies_dict = CreateGiftDict(candies_list);
+
             #region Demonstration
-            //Gift MyGift = new Gift("MyGift", Candies);
-            //MyGift.FindBySugar(25, 26);
-            //MyGift.OrderByName();
-            //MyGift.OrderByMass();
+            Gift MyGift = new Gift("MyGift", candies_dict);
+            MyGift.GetMass();
+            MyGift.FindBySugar(25, 26);
+            MyGift.OrderByName();
+            MyGift.OrderByMass();
             #endregion
 
             Console.ReadKey();

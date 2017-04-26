@@ -36,6 +36,10 @@ namespace CandyGift.Gifts
             _mass = candies.Select(pair => pair.Key.Mass * pair.Value).Sum();
         }
 
+        public void GetMass()
+        {
+            Console.WriteLine("Gift mass: {0} g.\n", Mass);
+        }
         public void FindBySugar(int min, int max)
         {
             if (min <= max)
