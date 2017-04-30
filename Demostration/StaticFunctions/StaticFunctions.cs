@@ -1,5 +1,6 @@
 ﻿using CandyGift.BaseCandyClasses;
 using CandyGift.SaltedCandies;
+using CandyGift.SweetCandies;
 using System;
 using System.Collections.Generic;
 using System.Linq;

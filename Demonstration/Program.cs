@@ -17,15 +17,16 @@ namespace Demonstration
     {  
         static void Main(string[] args)
         {
-            List<Candy> candies_list = StaticFunctions.LoadXML();
-            Dictionary<Candy, int> candies_dict = StaticFunctions.CreateGiftDict(candies_list);
+            
+            Waffles wafle = new Waffles("Soviet", 50, 25, null);
+            List<object> prop_list = (List<object>)wafle.PropertyList;
 
             #region Demonstration
-            Gift MyGift = new Gift("MyGift", candies_dict);
-            MyGift.GetMass();
-            MyGift.FindBySugar(25, 26);
-            MyGift.OrderByName();
-            MyGift.OrderByMass();
+            //Gift MyGift = new Gift("MyGift", candies_dict);
+            //MyGift.GetMass();
+            //MyGift.FindBySugar(25, 26);
+            //MyGift.OrderByName();
+            //MyGift.OrderByMass();
             #endregion
 
             Console.ReadKey();

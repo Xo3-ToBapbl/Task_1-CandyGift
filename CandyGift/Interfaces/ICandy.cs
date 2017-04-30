@@ -12,7 +12,7 @@ namespace CandyGift.Interfaces
         int Mass { get; }
         ICollection<object> PropertyList { get; }
 
-        void GetProperties();
+        List<object> GetProperties();
         void UpMainComponentBy(int ratio);
         void DownMainComponentBy(int ratio);
     }

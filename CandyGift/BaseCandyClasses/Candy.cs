@@ -20,16 +20,11 @@ namespace CandyGift.BaseCandyClasses
             Mass = mass;
         }
 
-        public void GetProperties()
+        public List<object> GetProperties()
         {
-            Console.WriteLine("{0}'s properties:", CandyType);
-            foreach (object property in PropertyList)
-            {
-                Console.WriteLine("{0}", property);
-            }
-            Console.WriteLine();
+            return (List<object>)PropertyList;
         }
-        abstract public void UpMainComponentBy(int ratio);
-        abstract public void DownMainComponentBy(int ratio);
+        public abstract void UpMainComponentBy(int ratio);
+        public abstract void DownMainComponentBy(int ratio);
     }
 }

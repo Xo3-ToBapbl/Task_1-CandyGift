@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace CandyGift.BaseCandyClasses
 {
-    public class SaltedCandy : Candy, ISaltedCandy
+    public abstract class SaltedCandy : Candy, ICandy, ISaltedCandy
     {
         public int Salt { get; private set; }
 
-        protected SaltedCandy(string name, int mass, int salt) : base(name, mass)
+        public SaltedCandy(string name, int mass, int salt) : base(name, mass)
         {
             Salt = salt;
             PropertyList = new List<object> { Name, Mass, Salt};
@@ -23,13 +23,13 @@ namespace CandyGift.BaseCandyClasses
         }
         public override void DownMainComponentBy(int ratio)
         {
-            if (Salt < ratio)
+            if (ratio < Salt)
             {
                 Salt -= ratio;
             }
             else
             {
-                Console.WriteLine("Incorrect input. Reduction ratio is less than sugar value.");
+                throw new Exception("Incorrect input. Reduction ratio is less than sugar value.");
             }
         }
     }

@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace CandyGift.BaseCandyClasses
 {
-    public class SweetCandy: Candy, ISweetCandy, ITopping
+    public class SweetCandy: Candy, ICandy, ISweetCandy, ITopping
     {
         public int Sugar { get; private set; }
         public string Topping { get; private set; }
 
-        protected SweetCandy(string name, int mass, int sugar, string topping):base (name, mass)
+        public SweetCandy(string name, int mass, int sugar, string topping):base (name, mass)
         {
             Sugar = sugar;
             Topping = topping;
@@ -31,7 +31,7 @@ namespace CandyGift.BaseCandyClasses
             }
             else
             {
-                Console.WriteLine("Incorrect input. Reduction ratio is less than sugar value.");
+                throw new Exception("Incorrect input. Reduction ratio is less than sugar value.");
             }
         }
     }

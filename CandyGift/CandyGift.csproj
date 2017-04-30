@@ -46,7 +46,6 @@
     <Compile Include="Gifts\Gift.cs" />
     <Compile Include="SaltedCandies\Cracker.cs" />
     <Compile Include="SaltedCandies\Salmiak.cs" />
-    <Compile Include="Static\StaticFunctions.cs" />
     <Compile Include="SweetCandies\ChocolateCandy.cs" />
     <Compile Include="SweetCandies\LolliPop.cs" />
     <Compile Include="SweetCandies\Waffles.cs" />
