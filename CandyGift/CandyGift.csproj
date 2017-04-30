@@ -43,6 +43,7 @@
     <Compile Include="BaseCandyClasses\Candy.cs" />
     <Compile Include="BaseCandyClasses\SaltedCandy.cs" />
     <Compile Include="BaseCandyClasses\SweetCandy.cs" />
+    <Compile Include="CandiesCreator\CandiesCreator.cs" />
     <Compile Include="Gifts\Gift.cs" />
     <Compile Include="SaltedCandies\Cracker.cs" />
     <Compile Include="SaltedCandies\Salmiak.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="Interfaces\ITopping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
