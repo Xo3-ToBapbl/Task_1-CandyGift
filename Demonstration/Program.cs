@@ -19,24 +19,18 @@ namespace Demonstration
         {
             #region Candies Creator
             CandiesCreator candies_creator = new CandiesCreator();
-            candies_creator.CreateChocolateCandy("Alenka", 25, 12, "Jam", count: 5);
+            candies_creator.CreateChocolateCandy("Alenka", 25, 12, "Jam", count: 2);
             candies_creator.CreateSalmiak("Salmiak", 34, 28, count: 3);
-            candies_creator.CreateWaffles("Vitba", 10, 8, null, count: 1);
-
-            List<Candy> candy_list = candies_creator.CandyList;
-            candy_list.RemoveAll(x=>x.Name== "Salmiak");
+            candies_creator.CreateWaffles("Litba", 10, 8, null, count: 1);
             #endregion
 
             #region Demonstration
             Gift MyGift = new Gift("MyGift", candies_creator.CandyList);
             int mass = MyGift.Mass;
+            List<Candy> candy_list_sugar = MyGift.FindBySugar(10, 13);
+            List<Candy> candy_list_ordered_by_name = MyGift.OrderByName();
 
-            Gift MyGift2 = new Gift("MtGift2");
-            int mass2 = MyGift2.Mass;
-            //MyGift.GetMass();
-            //MyGift.FindBySugar(25, 26);
-            //MyGift.OrderByName();
-            //MyGift.OrderByMass();
+            MyGift.ClearGift();
             #endregion
 
             Console.ReadKey();

@@ -10,7 +10,7 @@ namespace CandyGift.Gifts
 {
     public class Gift
     {
-        private ICollection<Candy> _candies_collection = new List<Candy>();
+        private List<Candy> _candies_collection = new List<Candy>();
 
         public string Name { get; }
         public int Mass
@@ -20,7 +20,7 @@ namespace CandyGift.Gifts
                 return _candies_collection.Select(candy => candy.Mass).Sum();
             }
         }
-        public ICollection<Candy> CandiesList
+        public List<Candy> CandiesList
         {
             get
             {
@@ -32,7 +32,7 @@ namespace CandyGift.Gifts
         {
             Name = name;
         }
-        public Gift(string name, ICollection<Candy> candies_collection):this(name)
+        public Gift(string name, List<Candy> candies_collection):this(name)
         {
             _candies_collection = _candies_collection.Concat(candies_collection).ToList();
         }
@@ -41,67 +41,46 @@ namespace CandyGift.Gifts
         {
             _candies_collection.Add(candy);
         }
-        //public void RemoveByName()
+        public void RemoveAllCandiesByName(string name)
+        {
+            _candies_collection.RemoveAll(x => x.Name == "Salmiak");
+        }
         public void ClearGift()
         {
             _candies_collection.Clear();
         }
 
-        //public void GetMass()
-        //{
-        //    Console.WriteLine("Gift mass: {0} g.\n", Mass);
-        //}
-        //public void FindBySugar(int min, int max)
-        //{
-        //    if (min <= max)
-        //    {
-        //        var SweetCandyList = from candy in _candies.Keys
-        //                             where candy is SweetCandy
-        //                             select (SweetCandy)candy;
-
-        //        var CandiesRangeSugarList = (from candy in SweetCandyList
-        //                                    where candy.Sugar >= min && candy.Sugar <= max
-        //                                    select candy).ToList();
-        //        if (CandiesRangeSugarList.Count != 0)
-        //        {
-        //            foreach (var candy in CandiesRangeSugarList)
-        //            {
-        //                Console.WriteLine("{0}'s with {1} g of sugar.", candy.Name, candy.Sugar);
-        //            }
-        //            Console.WriteLine();
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine("No candy with preset sugar range.\n");
-        //        }
-                    
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("Incorrect input. Max ratio is less than min ratio.\n");
-        //    }
-        //}
-        //public void OrderByName()
-        //{
-        //    var OrderedList = from candy in _candies.Keys
-        //                      orderby candy.Name
-        //                      select candy;
-        //    foreach (var candy in OrderedList)
-        //    {
-        //        Console.WriteLine(candy.Name);
-        //    }
-        //    Console.WriteLine();
-        //}
-        //public void OrderByMass()
-        //{
-        //    var OrderedList = from candy in _candies.Keys
-        //                      orderby candy.Mass
-        //                      select candy;
-        //    foreach (var candy in OrderedList)
-        //    {
-        //        Console.WriteLine("{0} with mass {1} g.", candy.Name, candy.Mass);
-        //    }
-        //    Console.WriteLine();
-        //}
+        public List<Candy> FindBySugar(int min, int max)
+        {
+            if (min <= max)
+            {
+                List<Candy> SweetCandyList = _candies_collection.
+                    Where(x => x is SweetCandy).
+                    Cast<SweetCandy>().
+                    Where(x => x.Sugar >= min && x.Sugar <= max).
+                    Cast<Candy>().
+                    ToList();
+                if (SweetCandyList.Count != 0)
+                {
+                    return SweetCandyList;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else
+            {
+                throw new Exception("Incorrect input. Max ratio is less than min ratio.");
+            }
+        }
+        public List<Candy> OrderByName()
+        {
+            List<Candy> OrderedList = (from candy in _candies_collection
+                                       orderby candy.Name
+                                       select candy).
+                                       ToList();
+            return OrderedList;
+        }
     }
 }
