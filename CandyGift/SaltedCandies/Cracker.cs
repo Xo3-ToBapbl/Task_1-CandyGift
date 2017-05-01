@@ -1,17 +1,15 @@
 ﻿using CandyGift.BaseCandyClasses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CandyGift.Interfaces;
 
 namespace CandyGift.SaltedCandies
 {
-    public class Cracker : SaltedCandy
+    public class Cracker : SaltedCandy, ISaltedCandy, ICandy
     {
-        public Cracker(string name, int mass, int salt) : base(name, mass, salt)
+        public int[] Size { get; }
+        public Cracker(string name, int mass, int salt, int[] size) : base(name, mass, salt)
         {
             CandyType = "Cracker";
+            Size = size;
         }
     }
 }

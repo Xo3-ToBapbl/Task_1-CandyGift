@@ -1,13 +1,9 @@
 ﻿using CandyGift.BaseCandyClasses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CandyGift.Interfaces;
 
 namespace CandyGift.SaltedCandies
 {
-    public class Salmiak : SaltedCandy
+    public class Salmiak : SaltedCandy, ISaltedCandy, ICandy
     {
         public Salmiak(string name, int mass, int salt) : base(name, mass, salt)
         {

@@ -3,28 +3,26 @@ using CandyGift.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CandyGift.Gifts
 {
     public class Gift
     {
-        private List<Candy> _candies_collection = new List<Candy>();
+        private IList<ICandy> _candies_collection = new List<ICandy>();
 
         public string Name { get; }
         public int Mass
         {
             get
-            {                
+            {
                 return _candies_collection.Select(candy => candy.Mass).Sum();
             }
         }
-        public List<Candy> CandiesList
+        public IList<ICandy> CandiesList
         {
             get
             {
-                return new List<Candy>(_candies_collection);
+                return new List<ICandy>(_candies_collection);
             }
         }
 
@@ -32,18 +30,25 @@ namespace CandyGift.Gifts
         {
             Name = name;
         }
-        public Gift(string name, List<Candy> candies_collection):this(name)
+        public Gift(string name, IList<ICandy> candies_collection) : this(name)
         {
             _candies_collection = _candies_collection.Concat(candies_collection).ToList();
         }
 
-        public void AddCandy(Candy candy)
+        public void AddCandy(ICandy candy)
         {
             _candies_collection.Add(candy);
         }
         public void RemoveAllCandiesByName(string name)
         {
-            _candies_collection.RemoveAll(x => x.Name == "Salmiak");
+            
+            foreach (ICandy candy in CandiesList)
+            {
+                if (candy.Name == name)
+                {
+                    _candies_collection.Remove(candy);
+                }
+            }
         }
         public void ClearGift()
         {
@@ -79,6 +84,16 @@ namespace CandyGift.Gifts
             List<Candy> OrderedList = (from candy in _candies_collection
                                        orderby candy.Name
                                        select candy).
+                                       Cast<Candy>().
+                                       ToList();
+            return OrderedList;
+        }
+        public List<Candy> OrderByMass()
+        {
+            List<Candy> OrderedList = (from candy in _candies_collection
+                                       orderby candy.Mass
+                                       select candy).
+                                       Cast<Candy>().
                                        ToList();
             return OrderedList;
         }
